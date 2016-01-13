@@ -1,0 +1,31 @@
+import:
+    path:  /list/{page}/{mode}
+    defaults: { _controller: 'ArcoVoltaicoImportBundle:Import:index',page:1, mode:all}
+
+import_show:
+    path:  /{id}/show
+    defaults: { _controller: 'ArcoVoltaicoImportBundle:Import:show' }
+
+import_new:
+    path:  /new
+    defaults: { _controller: 'ArcoVoltaicoImportBundle:Import:new' }
+
+
+
+import_edit:
+    path:  /{id}/edit
+    defaults: { _controller: 'ArcoVoltaicoImportBundle:Import:edit' }
+
+
+import_delete:
+    path:  /{id}/delete
+    defaults: { _controller: 'ArcoVoltaicoImportBundle:Import:delete' }
+    requirements: { methods: post|delete }
+
+
+
+importing:
+    path:  /sync/{id}/{upload}
+    defaults: { _controller: ArcoVoltaicoImportBundle:Import:importing, upload:true}
+    requirements:
+      _locale: en|es

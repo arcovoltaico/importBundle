@@ -1,0 +1,42 @@
+ArcoVoltaico\ImportBundle\Entity\Import:
+    type: entity
+    table: null
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: AUTO
+
+        name:
+            type: string
+            length: 255
+            nullable: false
+
+
+        path:
+            type: string
+            length: 255
+            nullable: true
+    
+
+        created:
+            type: datetime
+            nullable: true
+   
+
+    manyToOne:
+
+
+    uniqueConstraints:
+        www:
+            columns: path
+    lifecycleCallbacks:
+            preUpdate: [preUpload]
+            prePersist: [preUpload]
+            postUpdate: [Upload]
+            postPersist: [Upload]
+            postRemove: [removeUpload]
+

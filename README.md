@@ -139,7 +139,7 @@ Sometimes we don't want to create a record unless an attribute is defined in the
 **nullable:**true
 
 
-Sometimes we want to deduce the value of an atribute depending on the multiple value. See the offer example, where we assign the oofertype with id 1 when we are importing from Modalidades.Venta.
+Sometimes we want to deduce the value of an atribute depending on the multiple value. See the offer example, where we assign the oofertype with id 1 when we are importing from Mode.Sale.
 
 
 When we have a boolean attribute is possible to **activate** it only on some cases (i.e.: liveable will be true if Tipo is 1 or 2...)
@@ -152,14 +152,13 @@ If we need to 'translate' the values from the XML to your record, then we can us
 
 Maybe we'll need to assign value to some entity attribute that are not available on the XML, chances are that :
 
-- this value depends on another attribute from teh same entity:
+- this value depends on another attribute from the same entity:
     - So now you can fix this by tweaking the entity setters and/or constructor method.
 - it's more complex...:
     -  so you'll need to assign the attributes from an Event Listener.
 
 
 #Importing
-
 
 - go to yourdomain/en/import/new and upload your xml, so the import will start
 - you can reimport an xml by executing yourdomain/en/import/sync/ID_NUMBER
@@ -172,7 +171,7 @@ Maybe we'll need to assign value to some entity attribute that are not available
 
 - We can manage only one master entity, and it mut be followed by its children.
 
-- The fields, whose value will be part of other field, will , must be earlier in the import.
+- The fields, whose value will be part of other field, must be earlier in the import.
 
 - If we use some kind of quoted UID on your mappings in the config file, we'll remove the quotes.
 

@@ -27,7 +27,7 @@ and you want the job done just by writing a config file. The importer can even c
             bundle: AppBundle
             entities: 
 
-5. Sync your db schema in order to create the import entity
+5. Create a doctrine migrate (diff) and migrate or update/sync your db schema in order to create the import entity
 
 #Setting the importer
 

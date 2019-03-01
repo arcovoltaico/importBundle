@@ -139,7 +139,7 @@ Sometimes we don't want to create a record unless an attribute is defined in the
 **nullable:**true
 
 
-Sometimes we want to deduce the value of an atribute depending on the multiple value. See the offer example, where we assign the oofertype with id 1 when we are importing from Mode.Sale.
+Sometimes we want to deduce the value of an atribute depending on the multiple value. See the offer example, where we assign the offertype with id 1 when we are importing from Mode.Sale.
 
 
 When we have a boolean attribute is possible to **activate** it only on some cases (i.e.: liveable will be true if Tipo is 1 or 2...)
